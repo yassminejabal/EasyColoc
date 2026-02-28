@@ -4,6 +4,7 @@ use App\Http\Controllers\categorieController;
 use App\Http\Controllers\ColocationController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProfileController;
+use App\Mail\Mailinvetation;
 use Illuminate\Support\Facades\Route;
 
 
@@ -39,3 +40,4 @@ Route::post('expense.store',[ExpenseController::class,'store'])->name('expense.s
 // Route::get('categorie.create',[categorieController::class,'index'])->name('categorie.index');
 Route::get('Macolocation',[ColocationController::class,'Macolocation']);
 Route::get('/MaColocation',[ColocationController::class,'Macolocation'])->name('MaColocation');
+Route::post('/invetationcreate',[Mailinvetation::class,]);

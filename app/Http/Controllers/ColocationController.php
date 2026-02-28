@@ -43,7 +43,7 @@ class ColocationController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StorecolocationRequest $request)
-    
+
     {
         $user = Auth::user();
         $isActivememberchip = User::find($user->id)->colocations()->wherePivot('status', 'active')->exists();
